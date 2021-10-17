@@ -1,0 +1,30 @@
+package Q2;
+
+public class Sum {
+
+    public int add(int...numbers) {
+        int total = 0;
+        for(int number: numbers){
+            total += number;
+        }
+
+        return total;
+    }
+
+    public double add(double...numbers) {
+        int total = 0;
+        for(double number: numbers){
+            total += number;
+        }
+
+        return total;
+    }
+    public static void main(String[] args) {
+        Sum sum = new Sum();
+        System.out.println(sum.add(2, 3)); //output : 5
+        System.out.println(sum.add(4, 9, 12));//output : 25
+        System.out.println(sum.add(4, 5.0));//output : 9.0
+        System.out.println(sum.add(15.5, 5));//output : 20.5
+        System.out.println(sum.add(1.0, 6.4));//output : 7.4
+    }
+}

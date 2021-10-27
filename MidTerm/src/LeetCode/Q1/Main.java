@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Fiction fiction = new Fiction("Frankenstein", 20.00, "1993");
         NonFiction nonFiction = new NonFiction("Anne Fran", 10.0, "1990");
+        Reference reference = new Reference("World Maps", 50.5, "1994", "dictionary");
         System.out.println(fiction.toString());
         System.out.println(nonFiction.toString());
         fiction.setBorrowDate(5);

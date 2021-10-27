@@ -2,7 +2,7 @@ package LeetCode.Q1;
 
 public class Reference extends Book{
 
-    public String category = "dictionaries";
+    private String category;
     public String getCategory() {
         return category;
     }
@@ -11,8 +11,9 @@ public class Reference extends Book{
         super("World Maps", 20.0, "1877");
     }
 
-    public Reference(String title, Double price, String publishYear) {
+    public Reference(String title, Double price, String publishYear, String category) {
         super(title, price, publishYear);
+        this.category = category;
     }
 
 

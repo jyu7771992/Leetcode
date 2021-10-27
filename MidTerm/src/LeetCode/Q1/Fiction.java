@@ -5,10 +5,10 @@ public class Fiction extends Book implements iBorrowable{
     private int endDay;
 
     public Fiction() {
-        super("HarryPotter", 200.00, "1990");
+        super("HarryPotter", 200.00, publishYear, "1990");
     }
     public Fiction(String title, Double price, String publishYear) {
-        super(title, price, publishYear);
+        super(title, price, publishYear, publishYear);
     }
 
 

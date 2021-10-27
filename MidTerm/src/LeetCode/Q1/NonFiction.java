@@ -5,10 +5,10 @@ public class NonFiction extends Book implements iBorrowable{
     private int endDay;
 
     public NonFiction() {
-        super("Anne Frank", 40.00, "1994");
+        super("Anne Frank", 40.00, publishYear, "1994");
     }
     public NonFiction(String title, Double price, String publishYear) {
-        super(title, price, publishYear);
+        super(title, price, publishYear, publishYear);
     }
 
     @Override

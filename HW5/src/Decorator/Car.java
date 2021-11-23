@@ -1,8 +1,12 @@
 package Decorator;
 
-public class Car {
+public abstract class Car implements ICar{
 
-    public static void main(String[] args) {
+
 	// write your code here
-    }
+    public abstract String getName();
+    @Override
+    public abstract void assemble();
+
+
 }

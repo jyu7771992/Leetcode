@@ -5,13 +5,13 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        Student Mark = new Student("Mark Bruce", 3.5);
-        Student Ashish = new Student("Ashish Ashish", 4.0);
-        Student John = new Student("John Mercer", 4.0);
-        Student Peter = new Student("Peter Gambling", 4.0);
-        Student Tom = new Student("Tom Secrecy", 2.5);
-        Student Sara = new Student("Sara Smith", 3.0);
-        Student Beth = new Student("Beth Clinton", 4.0);
+        Student Mark = new Student("Mark", 3.5);
+        Student Ashish = new Student("Ashish", 4.0);
+        Student John = new Student("John", 4.0);
+        Student Peter = new Student("Peter", 4.0);
+        Student Tom = new Student("Tom", 2.5);
+        Student Sara = new Student("Sara", 3.0);
+        Student Beth = new Student("Beth", 4.0);
         ArrayList<Student> students = new ArrayList<>();
         students.add(Mark);
         students.add(Ashish);
@@ -20,44 +20,43 @@ public class Main {
         students.add(Tom);
         students.add(Sara);
         students.add(Beth);
-
-        for(Student student : students){
-            System.out.println(student.name + ", age: " + student.gpa);
-        }
+        System.out.println("Before sort-------------");
         //Sort by ascending order of 'name'
-        System.out.println("Sort by ascending order of 'name'");
-        String upperCased = doStringStuff(new StringFunction() {
+        for(Student student : students){
+            System.out.println( student.getName()+ "," + student.getGpa());
+        }
+        System.out.println("1. Sort by ascending order of 'name'-----------");
+//
+        Collections.sort(students, new Comparator<Student>() {
             @Override
-            public String ConvertUppercaseAndConcatenate(String str1, String str2) {
-                return str1.toUpperCase() + " " + str2.toUpperCase();
+            public int compare(Student s1, Student s2) {
+                return s1.getName().compareTo(s2.getName());
             }
-        }, "Ashish", "Singh");
-
-        StringFunction sf = (str1, str2) -> str1.toUpperCase() + " " + str2.toUpperCase();
-        upperCased = doStringStuff(sf, "Ashish", "Singh");
-
-        System.out.println(upperCased);
-
+        });
+        for(Student student : students){
+            System.out.println( student.getName()+ "," + student.getGpa());
+        }
         //Sort by descending order of 'gpa'
+        System.out.println("2. Sort by descending order of 'gpa'-----------");
         Collections.sort(students, new Comparator<Student>() {
             @Override
             public int compare(Student s1, Student s2) {
                 Double gpa1 = s1.getGpa();
                 Double gpa2 = s2.getGpa();
                 if(gpa1 == gpa2){
-                    return 0;
+                    return s1.name.compareTo(s2.name);
                 } else if (gpa1 < gpa2){
                     return 1;
-                } else{
+                } else {
                     return -1;
                 }
             }
         });
-        System.out.println("Sort by descending order of 'gpa'");
-        System.out.println(students);
 
-    }
-    public static  String doStringStuff(StringFunction sf, String str1, String str2 ){
-        return sf.ConvertUppercaseAndConcatenate(str1, str2);
+        for(Student student : students){
+            System.out.println( student.getName()+ "," + student.getGpa());
+        }
+        System.out.println("3. Sort by ascending order of 'dateOfBirth'-----------");
+
     }
 }

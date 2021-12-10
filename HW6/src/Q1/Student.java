@@ -1,5 +1,6 @@
 package Q1;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -8,18 +9,10 @@ public class Student {
     private int id;
     public String name;
     public double gpa;
-    public Date dateOfBirth;
+    public String dateOfBirth;
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getName() {
@@ -30,20 +23,17 @@ public class Student {
         return gpa;
     }
 
-    public void setGpa(double gpa) {
-        this.gpa = gpa;
-    }
-
-    public Date getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
-
-    public Student(String name, double gpa){
+    public Student(int id, String name, double gpa, String dateOfBirth){ //
+        this.id = id;
         this.name = name;
         this.gpa = gpa;
+        this.dateOfBirth = dateOfBirth;
     }
 }

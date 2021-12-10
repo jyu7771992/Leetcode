@@ -27,9 +27,8 @@ public class DrivingLicenseApplication {
         int day = Integer.parseInt(strDate);
 
         Date dateNow = new Date();
-        System.out.println(dateNow);
         Date date = new GregorianCalendar(year, month -1, day).getTime();
-        System.out.println(date);
+
         int difference = (int) ChronoUnit.DAYS.between( date.toInstant(), dateNow.toInstant());
         int userAge = difference / 365;
 

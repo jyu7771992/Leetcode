@@ -6,21 +6,48 @@ import java.util.List;
 
 public class Movie {
     String title;
-    int releaseDate;
-    List<String> actors;
-    List<String> directors;
+    Date releaseDate;
+    ArrayList<String> actors;
+    String director;
 
-    public Movie(String title, int releaseDate) {
+    public Movie(String title, Date releaseDate, ArrayList<String> actors, String director){
         this.title = title;
+        this.releaseDate = releaseDate;
+        this.actors = actors;
+        this.director = director;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Date getReleaseDate() {
+        return releaseDate;
+    }
+
+    public void setReleaseDate(Date releaseDate) {
         this.releaseDate = releaseDate;
     }
 
-    public void addActors(String actor) {
-        actors.add(actor);
+    public ArrayList<String> getActors() {
+        return actors;
     }
 
-    public void addDirectors(String director) {
-        directors.add(director);
+    public void setActors(ArrayList<String> actors) {
+        this.actors = actors;
     }
+
+    public String getDirector() {
+        return director;
+    }
+
+    public void setDirector(String director) {
+        this.director = director;
+    }
+
 
 }

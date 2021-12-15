@@ -8,7 +8,7 @@ public class Main {
         DOWN,
         LEFT,
         RIGHT
-    };
+    }
     public static void main(String[] args) {
 	// write your code here
         int [][] room = {
@@ -20,9 +20,10 @@ public class Main {
         Roomba roomba = new Roomba(room);
         System.out.println(roomba.move());
         System.out.println(roomba.move());
-        System.out.println(roomba.turnRight());
+        roomba.turnRight();
         System.out.println(roomba.move());
-
+        roomba.turnLeft();
+        System.out.println(roomba.move());
     }
 }
 //return false when out of bound

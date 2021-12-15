@@ -4,12 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Netflix {
-    List<Genre> genreList;
+    ArrayList<Genre> genreList;
 
     public Netflix () {
-        genreList = new ArrayList<>();
+        this.genreList = new ArrayList<>();
     }
+
     public void addGenre(Genre genre) {
-        genreList.add(genre);
+        this.genreList.add(genre);
     }
 }

@@ -18,6 +18,11 @@ public class Main {
                 {0,0,-1,0}
         };
         Roomba roomba = new Roomba(room);
+        System.out.println(roomba.move());
+        System.out.println(roomba.move());
+        System.out.println(roomba.turnRight());
+        System.out.println(roomba.move());
+
     }
 }
 //return false when out of bound
